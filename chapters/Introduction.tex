@@ -1,4 +1,3 @@
-%!TEX root = ../Thesis.tex
 \chapter{Introduction}
 
 \begin{itemize}
@@ -95,11 +94,11 @@ Praesent et pellentesque arcu. Phasellus venenatis mi eu lorem convallis et iacu
 \State $\textbf{size} \gets 0$
 \For {$i = 1$ to $T$}
     \State $M \gets B$ examples picked randomly from $X'$
-    
+
     \For{$\mathbf{x} \in M$} \Comment{\textit{Assignment step}}
         \State $\textbf{d}[\textbf{x}] \gets f(C,\mathbf{x}, \mathrm{P})$ \Comment{Cache closest center}
     \EndFor
-    
+
     \For {$\mathbf{x} \in M$} \Comment{\textit{Update step}}
         \State $\textbf{c} \gets \textbf{d[x]}$ \Comment{Get cached center for current \textbf{x}}
         \State $\textbf{size}[\textbf{c}] \gets \textbf{size}[\textbf{c}] + 1$ \Comment{Update cluster size}
@@ -111,7 +110,7 @@ Praesent et pellentesque arcu. Phasellus venenatis mi eu lorem convallis et iacu
 \end{algorithmic}
 \end{algorithm}
 
-Fusce id suscipit sem. Aliquam venenatis nibh nec nisl luctus vel consectetur neque dapibus. Nulla feugiat egestas turpis, ac viverra eros cursus sit amet. Cras tincidunt felis vel tellus ultrices condimentum. Quisque vehicula, arcu vitae interdum dignissim, purus tortor cursus libero, sit amet accumsan quam magna in neque. Phasellus luctus leo odio. Aliquam ultricies, arcu quis tempor rhoncus, tellus nisl tempus justo, condimentum tempor erat odio ac purus. Integer quis ipsum felis. Aliquam volutpat, leo ac consequat egestas, lectus lacus adipiscing quam, id iaculis dolor quam in erat. Phasellus tempor interdum arcu quis vestibulum. Pellentesque sit amet augue purus. 
+Fusce id suscipit sem. Aliquam venenatis nibh nec nisl luctus vel consectetur neque dapibus. Nulla feugiat egestas turpis, ac viverra eros cursus sit amet. Cras tincidunt felis vel tellus ultrices condimentum. Quisque vehicula, arcu vitae interdum dignissim, purus tortor cursus libero, sit amet accumsan quam magna in neque. Phasellus luctus leo odio. Aliquam ultricies, arcu quis tempor rhoncus, tellus nisl tempus justo, condimentum tempor erat odio ac purus. Integer quis ipsum felis. Aliquam volutpat, leo ac consequat egestas, lectus lacus adipiscing quam, id iaculis dolor quam in erat. Phasellus tempor interdum arcu quis vestibulum. Pellentesque sit amet augue purus.
 \begin{figure}[htbp]
     \centering
         \missingfigure[figwidth=6cm]{This is some text that is with the todo and in the figure}
