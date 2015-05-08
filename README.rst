@@ -1,6 +1,13 @@
-=================================
-Laursen's XeLaTeX thesis template
-=================================
+============================================================
+LuaLaTeX thesis template for Technical University of Denmark
+============================================================
+
+This template is based on Laursen's XeLaTeX thesis template.
+
+
+========
+Original
+========
 
 This is an alternative to the "LUKE'S PHD THESIS TEMPLATE 1.2" used as standard layout for the
 thesis written at DTU Compute.
@@ -102,4 +109,3 @@ Typesetting
 Simply press "Quick Build". This will run all necessary commands including setting up your bibliography if there are any changes to it.
 
 If the bibliography is not changed only ``xelatex`` needs to run one single time. You can therefore select XeLaTeX from the run menu instead of the default in Quick build.
-
