@@ -1,12 +1,16 @@
 LATEX=lualatex -shell-escape -file-line-error -interaction=nonstopmode
 
+define make_cmd
+    latexmk -pdf -pdflatex="$(LATEX)" -use-make $1 Thesis.tex
+endef
+
 .PHONY: all
 all: Thesis.tex
-	latexmk -pdf -pdflatex="$(LATEX)" -use-make Thesis.tex
+	$(call make_cmd)
 
 .PHONY: auto
 auto: Thesis.tex
-	latexmk -pdf -pdflatex="$(LATEX)" -use-make -pvc Thesis.tex
+	$(call make_cmd, -pvc)
 
 .PHONY: clean
 clean:
