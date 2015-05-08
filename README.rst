@@ -4,6 +4,9 @@ LaTeX thesis template for Technical University of Denmark
 
 This template is based on Laursen's XeLaTeX thesis template.
 
+Sample
+========
+.. image:: sample.png
 
 ========
 Original
