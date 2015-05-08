@@ -1,7 +1,8 @@
 \RequirePackage[l2tabu,orthodox]{nag}
 \RequirePackage{iftex}
 
-\ifLuaTeX
+\ifXeTeX
+\else
   \RequirePackage{pdftexcmds}
   \makeatletter
   \let\strcmp\pdf@strcmp
@@ -12,9 +13,8 @@
 \papersizeswitch{b5paper}{\def\classfontsize{10pt}}{\def\classfontsize{12pt}}
 
 \documentclass[\classfontsize,\papersize,twoside,showtrims,extrafontsizes]{memoir}
-\RequireLuaTeX
 
-\showtrimsoff
+% \showtrimsoff
 \papersizeswitch{b5paper}{
     % Stock and paper layout
     \pagebv
@@ -96,8 +96,14 @@
 \graphicspath{{graphics/}}
 
 % Language
-\usepackage{polyglossia}    % multilingual typesetting and appropriate hyphenation
-\setdefaultlanguage{english}
+
+\ifPDFTeX
+  \usepackage[danish,english]{babel}
+\else
+  \usepackage{polyglossia}    % multilingual typesetting and appropriate hyphenation
+  \setdefaultlanguage{english}
+  \setotherlanguage{danish}
+\fi
 \usepackage{csquotes}       % language sensitive quotation facilities
 
 % Bibliography (references)
